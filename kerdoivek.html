@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/364b2f4b22.css">
+  <title>fizu.hu|Kedvenc statisztikáink</title>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 sticky-top">
+  <a class="navbar-brand fizu" href="index.html">fizu.hu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active px-3">
+        <a class="nav-link" href="index.html">Főoldal<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item px-3">
+        <a class="nav-link" href="kedvenc-stat.html">Kedvenc statisztikáink</a>
+      </li>
+      <li class="nav-item px-3">
+        <a class="nav-link" href="kerdoivek.html">Kérdőívek</a>
+      </li>
+      <li class="nav-item px-3">
+        <a class="nav-link" href="rolunk.html">Rólunk</a>
+      </li>
+      <li class="nav-item dropdown mr-5 ml-3">
+        <a class="nav-link dropdown-toggle btn-group mr-5" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
+        <div class="dropdown-menu  text-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="profilom.html">Profilom</a>
+          <a class="dropdown-item" href="terkep.html">Fizu-térkép</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Kijelentkezés</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid mb-0">
+  <div class="container">
+    <h1 class="">Töltsd ki a kérdőíveket!</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat sequi, placeat dolor aliquid porro a quisquam ut, accusantium quasi assumenda maiores ipsum vel.</p>
+    <a class="btn btn-green btn-lg mt-3" href="#" role="button">Tovább a Fizu-térképre!</a>
+  </div>
+</div>
+
+<section class="">
+  <div class="container py-5 mt-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Rövid kérdőív</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hosszú kérdőív</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+        <!-- /rövid kérdőív -->
+        <div class="row py-5 mx-4 ">
+          <div class="col-12 col-md-7 py-md-3">
+            <p>Neme</p>
+          </div>
+          <div class="col-12 col-md-5 py-md-3 mb-3">
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Férfi</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Nő</label>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Hány éves?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">14</option>
+            <option value="2">15</option>
+            <option value="3">16</option>
+            <option value="4">17</option>
+            <option value="5">18</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Melyik megyében végzi a munkáját?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">Bács-Kiskun megye</option>
+            <option value="2">Csongrád megye</option>
+            <option value="3">Fejér megye</option>
+            <option value="4">Jász-Nagykun-Szolnok megye</option>
+            <option value="5">Hajdú-Bihar megye</option>
+        </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Melyik településen végzi a munkáját?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">Cegléd</option>
+            <option value="2">Szeged</option>
+            <option value="3">Szombathely</option>
+            <option value="4">Kecskemét</option>
+            <option value="5">Pécs</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Mennyi a havi bruttó keresete?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="number" class="form-control" id="validationDefault03" placeholder="" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Melyik ágazatban dolgozik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Milyen munkakörben dolgozik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Mi a fő munkaviszonya?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">Alkalmazott</option>
+            <option value="2">Közalkalmazott</option>
+            <option value="3">Családi vállakozás tagja</option>
+            <option value="3">Vállalkozó alkalmazottakkal</option>
+            <option value="3">Vállalkozó alkalmazottak nélkül</option>
+            <option value="3">Gyakornok</option>
+            <option value="3">Diák</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Milyen iskolai végzettséggel rendelkezik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">Alapfokú</option>
+            <option value="2">Középfokú</option>
+            <option value="3">Felsőfokú</option>
+            <option value="3">PhD</option>
+            <option value="3">Vállalkozó alkalmazottak nélkül</option>
+            <option value="3">Gyakornok</option>
+            <option value="3">Diák</option>
+          </select>
+        </div>
+
+        <div class="col text-center mt-5">
+          <button class="btn btn-outline-success" type="submit">Elküldöm</button>
+        </div>
+      </div>
+    </div>
+    <!-- /rövid kérdőív -->
+
+    <!-- hosszú kérdőív -->
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="row py-5 mx-4">
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Teljes munkaidőben dolgozik?</p>
+        </div>
+          <div class="col-12 col-md-5 py-md-3 mb-3">
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option1" name="d">
+            <label class="form-check-label" for="inlineRadio3">Igen</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option2" name="d">
+            <label class="form-check-label" for="inlineRadio4">Nem</label>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Általában hány órát dolgozik egy héten?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="number" class="form-control" id="validationDefault03" placeholder="" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Egy vagy több fizetett állással rendelkezik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <form>
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option1" name="c">
+          <label class="form-check-label" for="inlineRadio5">Igen</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option2" name="c">
+          <label class="form-check-label" for="inlineRadio6">Nem</label>
+        </div>
+      </form>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Gyes/gyed-en vagy egyéb állományban van?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <form>
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="option1" name="a">
+          <label class="form-check-label" for="inlineRadio7">Igen</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio8" value="option2" name="a">
+          <label class="form-check-label" for="inlineRadio8">Nem</label>
+        </div>
+      </form>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Munkaképtelen hosszantartó betegség vagy fogyatékosság miatt?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio9" value="option1" name="b">
+          <label class="form-check-label" for="inlineRadio9">Igen</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio10" value="option2" name="b">
+          <label class="form-check-label" for="inlineRadio10">Nem</label>
+        </div>
+        </div>
+
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Milyen a cég tulajdoni formája, ahol dolgozik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válassz</option>
+            <option value="1">Belföld</option>
+            <option value="2">Külföld</option>
+            <option value="3">Állami tulajdon</option>
+            <option value="4">Szövetkezet</option>
+            <option value="5">Egyesület</option>
+            <option value="3">Köztulajdon</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Hány főt foglalkoztató cégnél dolgozik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Open this select menu</option>
+            <option value="1">1-10</option>
+            <option value="2">10-20</option>
+            <option value="3">20-50</option>
+            <option value="3">50-100</option>
+            <option value="3">100-200</option>
+            <option value="3">200-</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>A cég ahol dolgozik több helyszínen is jelen van?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio11" value="option1">
+          <label class="form-check-label" for="inlineRadio11">Igen</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio12" value="option2">
+          <label class="form-check-label" for="inlineRadio12">Nem</label>
+        </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Mennyire elégedett a munkájával?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">Nagyon elégedett</option>
+            <option value="2">Ideális</option>
+            <option value="3">Elégedetlen</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Figyelembe véve a munkakörét és a hozzá tartozó feladatait, mennyire elégett a fizetésével?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">Nagyon elégedett</option>
+            <option value="2">Ideális</option>
+            <option value="3">Elégedetlen</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>otthagyná-e jelenlegi munkahelyét, ha egy másik cég nagyobb fizetést ajánlana?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio13" value="option1">
+          <label class="form-check-label" for="inlineRadio13">Igen</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio14" value="option2">
+          <label class="form-check-label" for="inlineRadio14">Nem</label>
+        </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Eddigi élete folyamán hányszor váltott munkahelyet?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3-5</option>
+            <option value="4">6-10</option>
+            <option value="5">10-nél többször</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Hány éve dolgozik jelenleg munkahelyén?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">0-1 év</option>
+            <option value="2">1-3 év</option>
+            <option value="3">3-5 év</option>
+            <option value="3">5-10 év</option>
+            <option value="3">10- év</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Hány éves tapasztalattal rendelkezik?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">0-1 év</option>
+            <option value="2">1-3 év</option>
+            <option value="3">3-5 év</option>
+            <option value="3">5-10 év</option>
+            <option value="3">10- év</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Munkája során szüksége van idegennyelv tudásra?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio15" value="option1">
+          <label class="form-check-label" for="inlineRadio15">Igen</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio16" value="option2">
+          <label class="form-check-label" for="inlineRadio16">Nem</label>
+        </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Milyen nyelven/nyelveken beszél?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">angol</option>
+            <option value="2">német</option>
+            <option value="3">francia</option>
+            <option value="4">orosz</option>
+            <option value="5">kínai</option>
+          </select>
+          <select class="custom-select my-4">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">angol</option>
+            <option value="2">német</option>
+            <option value="3">francia</option>
+            <option value="4">orosz</option>
+            <option value="5">kínai</option>
+          </select>
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">angol</option>
+            <option value="2">német</option>
+            <option value="3">francia</option>
+            <option value="4">orosz</option>
+            <option value="5">kínai</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Mennyi időt fordított jelenlegi szakmájának elsajátítására?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">0-1 év</option>
+            <option value="2">1-3 év</option>
+            <option value="3">3-5 év</option>
+            <option value="3">5-10 év</option>
+            <option value="3">10- év</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Ön szerint mennyi tanulás szükséges ahhoz, hogy valaki teljes hatékonysággal tudja az Ön munkáját ellátni?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">0-1 év</option>
+            <option value="2">1-3 év</option>
+            <option value="3">3-5 év</option>
+            <option value="3">5-10 év</option>
+            <option value="3">10- év</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Képzettsége megfelel munkakörének?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">0-1 év</option>
+            <option value="2">1-3 év</option>
+            <option value="3">3-5 év</option>
+            <option value="3">5-10 év</option>
+            <option value="3">10- év</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Van igénye arra, hogy továbbképezze magát?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio17" value="option1">
+            <label class="form-check-label" for="inlineRadio17">Igen</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio18" value="option2">
+            <label class="form-check-label" for="inlineRadio18">Nem</label>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Milyen hosszúságú továbbképzéseken vett részt önköltséges alapon az elmúlt egy évben?</p>
+        </div>
+        <div class="col-12 col-md-5 py-md-3 mb-3">
+          <select class="custom-select">
+            <option selected>Válasszon a lehetőségek közül</option>
+            <option value="1">0-1 év</option>
+            <option value="2">1-3 év</option>
+            <option value="3">3-5 év</option>
+            <option value="3">5-10 év</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-7 py-md-3">
+          <p>Finanszírozott valamilyen továbbképzést cége az elmúlt 1 évben?</p>
+        </div>
+          <div class="col-12 col-md-5 py-md-3 mb-3">
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio19" value="option1">
+            <label class="form-check-label" for="inlineRadio19">Igen</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio20" value="option2">
+            <label class="form-check-label" for="inlineRadio20">Nem</label>
+          </div>
+        </div>
+
+        <div class="col text-center mt-5">
+          <button class="btn btn-outline-success" type="submit">Elküldöm</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<footer class="pt-5 text-light bg-dark">
+  <div class="container">
+    <div class="row py-4">
+      <div class="col-12 col-lg-4 my-auto text-center">
+        <a class="fizu" href="index.html">fizu.hu</a>
+      </div>
+      <div class="col-12 col-lg-4">
+        <ul class="list-unstyled text-center">
+          <li class="py-2"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Hírlevél-feliratkozás</a></li>
+          <li class="py-2"><a href="index.html">Főoldal</a></li>
+          <li class="py-2"><a href="kedvenc_stat.html">Kedvenc statisztikáink</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-4">
+        <ul class="list-unstyled text-center">
+          <li class="py-2"><a href="kerdoivek.html">Kérdőív</a></li>
+          <li class="py-2"><a href="rolunk.html">Rólunk</a></li>
+          <li class="py-2"><a href="terkep.html">Fizu-térkép</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <h1 class="line">BARÁTKOZZUNK</h1>
+    <div class="social-icons text-center">
+      <a class="px-2" href="https://facebook.com"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+      <a class="px-2" href="https://twitter.com"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a class="px-2" href="https://instagram.com"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+      <a class="px-2" href="https://pinterest.com"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row pt-4">
+      <div class="col-12 text-center">
+        <p>fizu.hu 2018-</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</body>
+
+</html>
