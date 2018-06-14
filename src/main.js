@@ -3,11 +3,11 @@ import 'bootstrap/scss/bootstrap.scss';
 import './style.scss';
 
 // JS
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from "vue";
+import App from "./App.vue";
 
-// init
+// init 
 new Vue({
-    el: '#app',
-    render: h=> h(App)
-})
+  el: "#app",
+  render: h => h(App)
+});
