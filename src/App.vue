@@ -30,7 +30,7 @@ export default {
 
   data: function() {
     return {
-      currentPage: "index",
+      currentPage: "blog",
       navItems: []
     };
   },
