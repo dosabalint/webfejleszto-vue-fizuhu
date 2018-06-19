@@ -7,7 +7,8 @@
             "imageSrc":
                 "https://i0.wp.com/www.mackcollier.com/wp-content/uploads/2016/01/laptop-593673_640.jpg?fit=640%2C413&resize=350%2C200",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Általános"
         },
         {
             "id": 7,
@@ -16,7 +17,8 @@
             "imageSrc":
                 "https://i2.wp.com/wptavern.com/wp-content/uploads/2016/05/blogging.jpg?fit=960%2C521&ssl=1&resize=350%2C200",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Gazdaság"
         },
         {
             "id": 6,
@@ -25,7 +27,8 @@
             "imageSrc":
                 "https://i2.wp.com/blogs.shu.ac.uk/c3riimpact/files/2017/06/IMG_1449-e1497879695736.jpg?fit=975%2C290&ssl=1&resize=350%2C200",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Általános"
         },
         {
             "id": 5,
@@ -34,7 +37,8 @@
             "imageSrc":
                 "https://i1.wp.com/www.blesserhouse.com/wp-content/uploads/2015/06/How-to-Boost-Traffic-3-of-2.jpg?resize=350%2C200&ssl=1",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Gazdaság"
         },
         {
             "id": 4,
@@ -43,7 +47,8 @@
             "imageSrc":
                 "https://i2.wp.com/www.boostmybudget.com/wp-content/uploads/2018/06/blog1.jpg?fit=750%2C500&resize=350%2C200",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Munka"
         },
         {
             "id": 3,
@@ -52,7 +57,8 @@
             "imageSrc":
                 "https://i2.wp.com/akpugo.com/wp-content/uploads/2018/04/start-a-free-blog-on-blogspot.jpg?resize=350%2C200&ssl=1",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Munka"
         },
         {
             "id": 2,
@@ -61,7 +67,8 @@
             "imageSrc":
                 "https://i0.wp.com/www.learning2bloom.com/wp-content/uploads/2016/11/Free-Webinar.jpg?resize=350%2C200&ssl=1",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Általános"
         },
         {
             "id": 1,
@@ -70,7 +77,8 @@
             "imageSrc":
                 "https://i0.wp.com/www.bluehost.com/blog/wp-content/uploads/2017/12/blog_blog.jpg?resize=350%2C200&ssl=1",
             "lead":
-                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat."
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Általános"
         }
     ]
 }

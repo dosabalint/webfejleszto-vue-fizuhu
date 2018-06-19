@@ -9,7 +9,7 @@
                     <div class="row px-lg-5">
                         <div class="card-deck my-5">
                             <div class="row">
-                                <div class="col-12 col-lg-6 my-3" v-for="post in postCollection">
+                                <div class="col-12 col-lg-6 my-3" v-for="post in filteredPostCollection">
                                     <BlogPostCard :post="post"></BlogPostCard>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@
                 </main>
 
                 <aside id="aside" class="col-12 col-md-3 mt-5">
-
+                    
                     <!-- Search -->
                     <form class="form-inline">
                         <input class="form-control mr-sm-2 mb-2" type="search" placeholder="Search" aria-label="Keresés">
@@ -47,26 +47,9 @@
                     </form>
 
                     <!-- cagetories -->
-                    <div class="mt-5">
-                        <h3>Kategóriák</h3>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">
-                                <a href="#">Kategória1 (27)</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#">Kategória2 (42)</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#">Kategória3 (74)</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#">Kategória4 (6)</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#">Kategória5 (11)</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <BlogPostCategories 
+                        :postCollection="postCollection" 
+                        @cagetoryChange="OnCategoryChange"></BlogPostCategories>
 
                     <div class="my-5">
                         <h3 class="mb-3">Tags</h3>
@@ -91,16 +74,19 @@
 
 <script>
 import BlogPostCard from '../components/BlogPostCard.vue';
+import BlogPostCategories from '../components/BlogPostCategories.vue';
 import DataService from '../DataService';
 
 export default {
     components: {
-        BlogPostCard
+        BlogPostCard,
+        BlogPostCategories
     },
 
     data() {
         return {
-            postCollection: []
+            postCollection: [],
+            filters: {}
         };
     },
 
@@ -108,6 +94,39 @@ export default {
         DataService.GetPosts().then(posts => {
             this.postCollection = posts;
         });
+    },
+
+    computed: {
+        filteredPostCollection() {
+            const filterKeyCollection = Object.keys(this.filters);
+
+            if (filterKeyCollection.length == 0) {
+                return this.postCollection;
+            }
+
+            console.log('filtered:', this.filters);
+
+            return this.postCollection.filter(item => {
+                const passingFilters = filterKeyCollection.filter(filterKey => {
+                    return item[filterKey] == this.filters[filterKey];
+                });
+
+                console.log(passingFilters);
+                console.log(filterKeyCollection);
+
+                return passingFilters.length == filterKeyCollection.length;
+            });
+        }
+    },
+
+    methods: {
+        OnCategoryChange(newCategory) {
+            if (!newCategory) {
+                this.$delete(this.filters, 'category');
+            } else {
+                this.$set(this.filters, 'category', newCategory);
+            }
+        }
     }
 };
 </script>
