@@ -98,22 +98,28 @@ export default {
 
     computed: {
         filteredPostCollection() {
+            // this.filters objektum kulcsai
             const filterKeyCollection = Object.keys(this.filters);
 
+            // ha a kulcsok[] hossza 0, akkor üres, tehát kiírhatjuk az összes elemet
             if (filterKeyCollection.length == 0) {
                 return this.postCollection;
             }
 
-            console.log('filtered:', this.filters);
+            // filterezzük a postCollectiont
+            return this.postCollection.filter(post => {
 
-            return this.postCollection.filter(item => {
+                // összeszedjük azokat a filtereket, amin átment a bejegyzés
+                // pl filterKey = category, akkor a filters[filterKey] 
+                // a kiválasztott kategória lesz, mondjuk "Általános"
                 const passingFilters = filterKeyCollection.filter(filterKey => {
-                    return item[filterKey] == this.filters[filterKey];
+                    return post[filterKey] == this.filters[filterKey];
                 });
 
-                console.log(passingFilters);
-                console.log(filterKeyCollection);
-
+                // akkor megy át a post a rostán, ha a filterek száma amint 
+                // átment megegyezik a filterek számával
+                // azaz ha van olyan filter, amint nem ment át, 
+                // akkor a bejegyzést nem engedjük megjelenni
                 return passingFilters.length == filterKeyCollection.length;
             });
         }
