@@ -39,7 +39,7 @@
                 </main>
 
                 <aside id="aside" class="col-12 col-md-3 mt-5">
-                    
+
                     <!-- Search -->
                     <form class="form-inline">
                         <input class="form-control mr-sm-2 mb-2" type="search" placeholder="Search" aria-label="Keresés">
@@ -98,29 +98,14 @@ export default {
 
     computed: {
         filteredPostCollection() {
-            // this.filters objektum kulcsai
-            const filterKeyCollection = Object.keys(this.filters);
-
-            // ha a kulcsok[] hossza 0, akkor üres, tehát kiírhatjuk az összes elemet
-            if (filterKeyCollection.length == 0) {
+            // ha nincs kagetória szűrés, akkor visszaadunk mindent
+            if (!this.$route.params.categoryName) {
                 return this.postCollection;
             }
 
-            // filterezzük a postCollectiont
+            // ha van kategória szűrés, akkor filterezzük az elemeket
             return this.postCollection.filter(post => {
-
-                // összeszedjük azokat a filtereket, amin átment a bejegyzés
-                // pl filterKey = category, akkor a filters[filterKey] 
-                // a kiválasztott kategória lesz, mondjuk "Általános"
-                const passingFilters = filterKeyCollection.filter(filterKey => {
-                    return post[filterKey] == this.filters[filterKey];
-                });
-
-                // akkor megy át a post a rostán, ha a filterek száma amint 
-                // átment megegyezik a filterek számával
-                // azaz ha van olyan filter, amint nem ment át, 
-                // akkor a bejegyzést nem engedjük megjelenni
-                return passingFilters.length == filterKeyCollection.length;
+                return post.category == this.$route.params.categoryName;
             });
         }
     },

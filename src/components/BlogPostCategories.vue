@@ -3,10 +3,14 @@
         <h3>Kategóriák</h3>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <a href="" @click.prevent="OnCategoryClickAll()">Összes</a>
+                <router-link :to="{ name: 'blog' }">
+                    Összes
+                </router-link>
             </li>
             <li class="list-group-item" v-for="category in categoryCollection">
-                <a href="" @click.prevent="OnCategoryClick(category)">{{ category }}</a>
+                <router-link :to="{ name: 'blogCategory', params: { categoryName: category }}">
+                    {{ category }}
+                </router-link>
             </li>
         </ul>
     </div>

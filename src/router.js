@@ -8,7 +8,22 @@ import blog from './pages/blog.vue';
 // router
 export default new VueRouter({
     routes: [
-        { path: '/', component: index },
-        { path: '/blog', component: blog }
+        {
+            name: 'index',
+            path: '/',
+            component: index
+        },
+        {
+            name: 'blog',
+            path: '/blog',
+            component: blog,
+            children: [
+                {
+                    name: 'blogCategory',
+                    path: 'category/:categoryName',
+                    component: blog
+                }
+            ]
+        }
     ]
 });
