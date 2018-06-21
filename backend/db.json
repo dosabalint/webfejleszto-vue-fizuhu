@@ -1,6 +1,16 @@
 {
     "blogposts": [
         {
+            "id": "demoID",
+            "title": "demo bejegyzés",
+            "date": "2018-05-30",
+            "imageSrc":
+                "https://i0.wp.com/www.mackcollier.com/wp-content/uploads/2016/01/laptop-593673_640.jpg?fit=640%2C413&resize=350%2C200",
+            "lead":
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+            "category": "Általános"
+        },
+        {
             "id": 8,
             "title": "Nyolcadik bejegyzés",
             "date": "2018-05-30",

@@ -10,7 +10,7 @@
             </p>
             <div class="d-flex flex-row justify-content-between align-items-center mt-4">
                 <small class="text-muted">{{ post.date }}</small>
-                <a href="#" class="mt-0">Tovább olvasom</a>
+                <router-link :to="{ name: 'blogPost', params: { postID: post.id }}" class="mt-0">Tovább olvasom</router-link>
             </div>
         </div>
     </div>

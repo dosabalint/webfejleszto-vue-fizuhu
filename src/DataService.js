@@ -7,5 +7,10 @@ export default {
         return Axios.get(BACKEND_URL + '/blogposts').then(result => {
             return result.data;
         });
+    },
+    GetPost(postID) {
+        return Axios.get(BACKEND_URL + '/blogposts/' + postID).then(result => {
+            return result.data;
+        });
     }
 };
