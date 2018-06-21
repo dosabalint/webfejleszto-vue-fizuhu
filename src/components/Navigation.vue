@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 sticky-top">
-    <a class="navbar-brand fizu" href="index.html">fizu.hu</a>
+    <router-link to="/" class="navbar-brand fizu">fizu.hu</router-link>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,18 +10,15 @@
       <ul class="navbar-nav ml-auto">
         
         <li class="nav-item px-3" v-for="item in itemCollection" :key="item.id">
-          <a class="nav-link" href="" @click.prevent="OnItemClick(item.id)"> 
+          <router-link 
+            :to="item.path" 
+            class="nav-link"> 
+
             {{ item.name }}
-          </a>
+          </router-link>
         </li>
 
-        <!-- <li class="nav-item active px-3">
-          <a class="nav-link" href="index.html">
-            Főoldal
-          </a>
-        </li>
-
-        <li class="nav-item px-3">
+        <!-- <li class="nav-item px-3">
           <a class="nav-link" href="kedvenc-stat.html">
             Kedvenc statisztikáink
           </a>
@@ -56,11 +53,6 @@
 
 <script>
 export default {
-  props: ["itemCollection"],
-  methods: {
-    OnItemClick(id) {
-      this.$emit("pageChange", id);
-    }
-  }
+    props: ['itemCollection']
 };
 </script>

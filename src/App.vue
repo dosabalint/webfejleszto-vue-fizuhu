@@ -1,10 +1,8 @@
 <template>
     <div>
-        <Navigation :itemCollection="navItems" @pageChange="OnPageChange"></Navigation>
+        <Navigation :itemCollection="navItems"></Navigation>
 
-				<keep-alive>
-					<component :is="currentPage"></component>
-				</keep-alive>
+		<router-view></router-view>
 
         <Footer></Footer>
     </div>
@@ -12,45 +10,35 @@
 
 <script>
 // components
-import Navigation from "./components/Navigation.vue";
-import Footer from "./components/Footer.vue";
-
-// pages
-import index from "./pages/index.vue";
-import blog from "./pages/blog.vue";
+import Navigation from './components/Navigation.vue';
+import Footer from './components/Footer.vue';
 
 export default {
-  name: "App",
-  components: {
-    Navigation,
-    Footer,
-    index,
-    blog
-  },
+    name: 'App',
 
-  data: function() {
-    return {
-      currentPage: "blog",
-      navItems: []
-    };
-  },
+    components: {
+        Navigation,
+        Footer
+    },
 
-  created() {
-    this.navItems.push({
-      name: "Főoldal",
-      id: "index"
-    });
-    this.navItems.push({
-      name: "Blog",
-      id: "blog"
-    });
-  },
+	data: function() {
+        return {
+            navItems: []
+        };
+    },
 
-  methods: {
-    OnPageChange(newPage) {
-      this.currentPage = newPage;
+    created() {
+        this.navItems.push({
+            name: 'Főoldal',
+            id: 'index',
+            path: '/'
+        });
+        this.navItems.push({
+            name: 'Blog',
+            id: 'blog',
+            path: '/blog'
+        });
     }
-  }
 };
 </script>
 
