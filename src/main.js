@@ -15,3 +15,16 @@ new Vue({
     router,
     render: h => h(App)
 });
+
+import DataService from './DataService';
+
+DataService.PostContactMessage({
+    name: 'Demo Felhasználó',
+    email: 'demo@email.hu'
+}).then(success => {
+    if (success) {
+        console.log('sikeresen lefutott az üzenetküldés');
+    } else {
+        console.log('sikertelen beküldés');
+    }
+});
