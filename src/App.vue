@@ -38,6 +38,11 @@ export default {
             id: 'blog',
             path: '/blog'
         });
+        this.navItems.push({
+            name: 'Kapcsolat',
+            id: 'kapcsolat',
+            path: '/contact'
+        });
     }
 };
 </script>
