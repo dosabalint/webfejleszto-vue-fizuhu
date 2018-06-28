@@ -35,7 +35,6 @@ export default {
 
     GetSurveyData() {
         return Axios.get(FIREBASE_URL + '/surveyResponses.json').then(result => {
-            console.log(result.data);
             return result.data;
         });
     },

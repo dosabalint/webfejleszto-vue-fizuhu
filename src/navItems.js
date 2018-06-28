@@ -15,6 +15,11 @@ export default [
         path: '/survey'
     },
     {
+        name: 'Fizutérkép',
+        id: 'statistics',
+        path: '/statistics'
+    },
+    {
         name: 'Kapcsolat',
         id: 'kapcsolat',
         path: '/contact'
