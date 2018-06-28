@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Navigation :itemCollection="navItems"></Navigation>
+        <Navigation></Navigation>
 
 		<router-view></router-view>
 
@@ -19,30 +19,6 @@ export default {
     components: {
         Navigation,
         Footer
-    },
-
-	data: function() {
-        return {
-            navItems: []
-        };
-    },
-
-    created() {
-        this.navItems.push({
-            name: 'Főoldal',
-            id: 'index',
-            path: '/'
-        });
-        this.navItems.push({
-            name: 'Blog',
-            id: 'blog',
-            path: '/blog'
-        });
-        this.navItems.push({
-            name: 'Kapcsolat',
-            id: 'kapcsolat',
-            path: '/contact'
-        });
     }
 };
 </script>

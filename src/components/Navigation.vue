@@ -52,7 +52,13 @@
 </template>
 
 <script>
+import navItems from '../navItems';
+
 export default {
-    props: ['itemCollection']
+    data() {
+        return {
+            itemCollection: navItems
+        };
+    }
 };
 </script>

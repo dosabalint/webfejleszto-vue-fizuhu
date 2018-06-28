@@ -6,6 +6,7 @@ import index from './pages/index.vue';
 import blog from './pages/blog.vue';
 import post from './pages/post.vue';
 import contact from './pages/contact.vue';
+import survey from './pages/survey.vue';
 
 // router
 export default new VueRouter({
@@ -34,6 +35,11 @@ export default new VueRouter({
             name: 'contact',
             path: '/contact',
             component: contact
+        },
+        {
+            name: 'survey',
+            path: '/survey',
+            component: survey
         }
     ]
 });
