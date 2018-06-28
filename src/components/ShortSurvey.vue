@@ -98,16 +98,22 @@ export default {
     },
     methods: {
         Submit(event) {
-            console.log(this.fields);
             const missingValues = Object.values(this.fields).filter(value => {
                 return !value;
             });
 
             if (missingValues.length == 0) {
+                // form submit prevent
                 event.preventDefault();
-
-                this.ShowThanksAlert();
-                this.ShowFailAlert();
+                
+                // POST
+                DataService.PostSurveyResponse(this.fields).then(success => {
+                    if (success) {
+                        this.ShowThanksAlert();
+                    } else {
+                        this.ShowFailAlert();
+                    }
+                });
             }
         },
         HideAllAlert() {
