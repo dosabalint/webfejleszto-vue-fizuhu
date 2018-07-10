@@ -47,9 +47,9 @@
                     </form>
 
                     <!-- cagetories -->
-                    <BlogPostCategories 
+                    <!-- <BlogPostCategories 
                         :postCollection="postCollection" 
-                        @cagetoryChange="OnCategoryChange"></BlogPostCategories>
+                        @cagetoryChange="OnCategoryChange"></BlogPostCategories> -->
 
                     <div class="my-5">
                         <h3 class="mb-3">Tags</h3>

@@ -1,0 +1,112 @@
+@firebaseDbUrl = https://fizuhulive.firebaseio.com
+
+GET {{firebaseDbUrl}}/.json
+Content-Type: application/json
+
+###
+
+POST {{firebaseDbUrl}}/alma.json
+Content-Type: application/json
+
+{
+   "magok": "asdfsadf",
+   "szeretem": "igen" 
+}
+
+###
+
+@id =-LH47Jt8JLFxc-Z7I-X5
+
+GET {{firebaseDbUrl}}/alma.json
+
+###
+
+GET {{firebaseDbUrl}}/alma/{{id}}.json
+
+###
+
+PUT {{firebaseDbUrl}}/alma/{{id}}.json
+Content-Type: application/json
+
+{
+    "elso": true,
+    "masodik": 5
+}
+
+###
+
+PATCH {{firebaseDbUrl}}/alma/{{id}}.json
+Content-Type: application/json
+
+{
+    "harmadik": "asdfsadfsad"
+}
+
+### 
+
+DELETE {{firebaseDbUrl}}/alma/{{id}}/asdfsda.json
+Content-Type: application/json
+
+###
+
+POST {{firebaseDbUrl}}/blogposts.json
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Első bejegyzés",
+    "date": "2018-05-09",
+    "imageSrc":
+        "https://i0.wp.com/www.bluehost.com/blog/wp-content/uploads/2017/12/blog_blog.jpg?resize=350%2C200&ssl=1",
+    "lead":
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloribus, earum, eum aliquam porro repellendus fugiat.",
+    "category": "Általános"
+}
+
+###
+
+@postId = -LH4AaOy9O30Wm6KMOQA
+
+PATCH  {{firebaseDbUrl}}/blogposts/{{postId}}.json
+Content-Type: application/json
+
+{
+    "id": "{{postId}}"
+}
+
+###
+
+@apiKey = 
+
+@signUpUrl = https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser
+
+@signInUrl = https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword
+
+POST {{signUpUrl}}?key={{apiKey}}
+Content-Type: application/json
+
+{
+    "email": "a@a.hu",
+    "password": "...",
+    "returnSecureToken": true
+}
+
+###
+
+@idToken = 
+
+POST {{signInUrl}}?key={{apiKey}}
+Content-Type: application/json
+
+{
+    "email": "a@a.hu",
+    "password": "...",
+    "returnSecureToken": true
+}
+
+###
+GET {{firebaseDbUrl}}/.json?auth={{idToken}}
+
+###
+
+GET {{firebaseDbUrl}}/.json
