@@ -16,14 +16,14 @@
                 <label for="exampleInputPassword1">Add meg a jelszavad</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Jelszó">
                 <small class="form-text"><a href="#">Elfelejtetted a jelszavad?</a></small>
-                <div class="form-check mt-3">
+                <!-- <div class="form-check mt-3">
                   <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
                   <label class="form-check-label" for="autoSizingCheck2">Bejelentkezve maradok</label>
-                </div>
-                <div class="my-3 text-center">
+                </div> -->
+                <!-- <div class="my-3 text-center">
                   <button type="submit" class="btn loginBtn loginBtn--facebook py-2 my-2"><img src="img/facebook.svg" height="20" alt="" class="mr-2 mb-1">Facebook bejelentkezés</button>
                   <button type="submit" class="btn loginBtn loginBtn--google py-2 my-2"><img src="img/google.svg" height="25" alt="" class="mr-2">Google bejelentkezés</button>
-                </div>
+                </div> -->
                 <div class="card-footer"></div>
                 <a class="btn btn-login btn-lg btn-block text-uppercase" href="index.html" role="button">Bejelentkezés</a>
                 <p class="pt-3 small"><a href="regisztracio.html">Még nem regisztáltál?</a></p>

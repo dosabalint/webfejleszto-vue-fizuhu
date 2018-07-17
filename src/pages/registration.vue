@@ -30,10 +30,10 @@
 
 
 
-              <div class="my-3 text-center">
+              <!-- <div class="my-3 text-center">
                 <button type="submit" class="btn loginBtn loginBtn--facebook py-2"><i class="fa fa-facebook pr-2"></i>Facebook bejelentkezés</button>
                 <button type="submit" class="btn loginBtn loginBtn--google py-2"><i class="fa fa-google pr-2"></i>Google bejelentkezés</button>
-              </div>
+              </div> -->
               <div class="card-footer bg-transparent"></div>
               <a class="btn btn-primary btn-lg btn-block" href="index.html" role="button">Regisztráció</a>
             </form>
