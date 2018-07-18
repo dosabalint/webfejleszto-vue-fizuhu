@@ -55,8 +55,6 @@
 </template>
 
 <script>
-import DataService from "../DataService";
-
 export default {
   name: "registration",
   data() {
@@ -73,9 +71,12 @@ export default {
         this.alerts.push("A ket jelszo nem egyezik, kerlek javitsd!");
       }
 
-      DataService.SignUp({ email: this.email, password: this.password })
+      this.$root
+        .signUpAction({
+          email: this.email,
+          password: this.password
+        })
         .then(r => {
-          this.$root.setUserMutation(r);
           this.$router.push({ name: "profil" });
         })
         .catch(err => {

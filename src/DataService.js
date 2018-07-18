@@ -9,8 +9,8 @@ const signInUrl = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/ve
 const signUpUrl = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${apiKey}`;
 
 export default {
-  SignIn({ email, password }) {
-    return Axios.post(signInUrl, {
+  Auth({ email, password, isSignUp }) {
+    return Axios.post(isSignUp ? signUpUrl : signInUrl, {
       email: email,
       password: password,
       returnSecureToken: true
@@ -20,25 +20,28 @@ export default {
         console.log("loginapi:", r);
         return r;
       })
-      .catch(console.warn);
-  },
-
-  SignUp({ email, password }) {
-    return Axios.post(signUpUrl, {
-      email: email,
-      password: password,
-      returnSecureToken: true
-    })
-      .then(r => r.data)
-      .then(r => {
-        console.log("signup:", r);
-        return r;
-      })
       .catch(err => {
         console.warn(err);
         return Promise.reject(err.response.data.error.message);
       });
   },
+
+  // SignUp({ email, password }) {
+  //   return Axios.post(signUpUrl, {
+  //     email: email,
+  //     password: password,
+  //     returnSecureToken: true
+  //   })
+  //     .then(r => r.data)
+  //     .then(r => {
+  //       console.log("signup:", r);
+  //       return r;
+  //     })
+  //     .catch(err => {
+  //       console.warn(err);
+  //       return Promise.reject(err.response.data.error.message);
+  //     });
+  // },
 
   GetPosts() {
     return Axios.get(`${FIREBASE_URL}/blogposts.json`).then(result => {

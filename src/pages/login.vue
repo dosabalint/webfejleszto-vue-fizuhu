@@ -21,7 +21,7 @@
                 <input type="password" class="form-control" 
                     id="exampleInputPassword1" 
                     placeholder="Jelszó"
-                    v-model="pass"
+                    v-model="password"
                 >
                 <small class="form-text"><a href="#">Elfelejtetted a jelszavad?</a></small>
                 <!-- <div class="form-check mt-3">
@@ -50,25 +50,24 @@
 </template>
 
 <script>
-import DataService from "../DataService";
-
 export default {
   name: "login",
   data() {
     return {
       email: "",
-      pass: ""
+      password: ""
     };
   },
   methods: {
     login() {
-      DataService.SignIn({
-        email: this.email,
-        password: this.pass
-      }).then(r => {
-        this.$root.setUserMutation(r);
-        this.$router.push({ name: "profil" });
-      });
+      this.$root
+        .signInAction({
+          email: this.email,
+          password: this.password
+        })
+        .then(r => {
+          this.$router.push({ name: "profil" });
+        });
     }
   }
 };
