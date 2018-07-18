@@ -30,15 +30,13 @@ new Vue({
   methods: {
     signInAction(credentialsPayload) {
       return this.authAction({
-        email: credentialsPayload.email,
-        password: credentialsPayload.password,
+        ...credentialsPayload,
         isSignUp: false
       });
     },
     signUpAction(credentialsPayload) {
       return this.authAction({
-        email: credentialsPayload.email,
-        password: credentialsPayload.password,
+        ...credentialsPayload,
         isSignUp: true
       });
     },
