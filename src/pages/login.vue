@@ -66,7 +66,7 @@ export default {
         email: this.email,
         password: this.pass
       }).then(r => {
-        this.$root.$data.user = Object.assign({}, r);
+        this.$root.setUserMutation(r);
         this.$router.push({ name: "profil" });
       });
     }

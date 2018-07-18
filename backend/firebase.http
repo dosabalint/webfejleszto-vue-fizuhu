@@ -86,8 +86,8 @@ POST {{signUpUrl}}?key={{apiKey}}
 Content-Type: application/json
 
 {
-    "email": "a@a.hu",
-    "password": "...",
+    "email": "c@c.hu",
+    "password": "cccccc",
     "returnSecureToken": true
 }
 
