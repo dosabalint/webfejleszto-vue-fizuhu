@@ -72,7 +72,6 @@
                 <a href="mailto:support@fizu.hu">support@fizu.hu</a>
             </div>
         </div>
-    </div>
     </form>
     <!-- /rövid kérdőív -->
 </template>
