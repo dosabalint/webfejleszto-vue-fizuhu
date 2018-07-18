@@ -76,7 +76,7 @@ Content-Type: application/json
 
 ###
 
-@apiKey = 
+@apiKey = AIzaSyCvlkvW4h6TMm0VRG_W1rF7jffWEMpgs-w
 
 @signUpUrl = https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser
 
@@ -93,14 +93,14 @@ Content-Type: application/json
 
 ###
 
-@idToken = 
+@idToken = eyJhbGciOiJSUzI1NiIsImtpZCI6IjZkZTdlNWFkMDRmZjZiYjczNWFiYWE0YjFiNzg5NGEzMzUwZGU5MTcifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZml6dWh1bGl2ZSIsImF1ZCI6ImZpenVodWxpdmUiLCJhdXRoX3RpbWUiOjE1MzE4NDYwMjYsInVzZXJfaWQiOiJEOTBkSVU4bmJ2Z0VrUDFWV2lkNkRvRVBkTnAxIiwic3ViIjoiRDkwZElVOG5idmdFa1AxVldpZDZEb0VQZE5wMSIsImlhdCI6MTUzMTg0NjAyNiwiZXhwIjoxNTMxODQ5NjI2LCJlbWFpbCI6ImFAYS5odSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJhQGEuaHUiXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.gvqTUL6aqXbzizapQ4Q_NVlkqyRvNk91vdV1LnPfDQyJzus5O4YmVZN3UplO96FCmEzgwe735nsNdURXUcrv5WH6C2ot11IS07qH0S0ca6Wl6X4JSe84-kzvlAXHvJtThSjj5FKgceNC9up_lE-jfL-QYK9sT9ydZiqMHh9QRFGJG0VN_3L1UcZq7xMRzULQUXnz5Xi6WJMaP4NmIAGPLJzTLJ-K1J5HzHO_pTHL3rISEGWt83PTvZMRVdHooWc_JJZc93d9YvOnZs1-8bn8WWaGOaIA2X7XspnzzuSKXkvsZ_qWiheJ5DWucB9WghHtYE3g1I8KmHlZ-0h8WSNNIQ
 
 POST {{signInUrl}}?key={{apiKey}}
 Content-Type: application/json
 
 {
     "email": "a@a.hu",
-    "password": "...",
+    "password": "aaaaaa",
     "returnSecureToken": true
 }
 
