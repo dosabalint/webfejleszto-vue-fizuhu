@@ -71,8 +71,8 @@ export default {
         this.alerts.push("A ket jelszo nem egyezik, kerlek javitsd!");
       }
 
-      this.$root
-        .signUpAction({
+      this.$store
+        .dispatch("signUpAction", {
           email: this.email,
           password: this.password
         })

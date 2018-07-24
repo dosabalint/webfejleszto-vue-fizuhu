@@ -60,8 +60,8 @@ export default {
   },
   methods: {
     login() {
-      this.$root
-        .signInAction({
+      this.$store
+        .dispatch("signInAction", {
           email: this.email,
           password: this.password
         })
