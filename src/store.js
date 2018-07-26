@@ -3,6 +3,14 @@ import Vuex from "vuex";
 import Axios from "axios";
 
 const apiKey = "AIzaSyCvlkvW4h6TMm0VRG_W1rF7jffWEMpgs-w";
+const emptyUserObject = {
+  kind: "",
+  idToken: "",
+  email: "",
+  refreshToken: "",
+  expiresIn: "",
+  localId: ""
+};
 
 Vue.use(Vuex);
 
@@ -13,7 +21,8 @@ export const TYPES = {
     auth: "auth"
   },
   mutations: {
-    setUser: "setUser"
+    setUser: "setUser",
+    deleteUser: "deleteUser"
   }
 };
 
@@ -23,14 +32,7 @@ const state = {
     signUp: `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${apiKey}`,
     firebase: "https://fizuhulive.firebaseio.com"
   },
-  user: {
-    kind: "",
-    idToken: "",
-    email: "",
-    refreshToken: "",
-    expiresIn: "",
-    localId: ""
-  }
+  user: emptyUserObject
 };
 
 const actions = {
@@ -60,6 +62,7 @@ const actions = {
       })
       .catch(err => {
         console.warn(err);
+        commit(TYPES.mutations.deleteUser);
         return Promise.reject(err.response.data.error.message);
       });
   }
@@ -69,6 +72,9 @@ const mutations = {
   [TYPES.mutations.setUser](state, userPayload) {
     console.log("userMutation: ", userPayload);
     state.user = { ...userPayload };
+  },
+  [TYPES.mutations.deleteUser](state) {
+    state.user = { ...emptyUserObject };
   }
 };
 
