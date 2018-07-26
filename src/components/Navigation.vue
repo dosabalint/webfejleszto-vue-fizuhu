@@ -12,7 +12,8 @@
         <li class="nav-item px-3" v-for="item in itemCollection" :key="item.id">
           <router-link 
             :to="item.path" 
-            class="nav-link"> 
+            class="nav-link"
+            data-toggle="collapse" data-target="#navbarNav"> 
 
             {{ item.name }}
           </router-link>
