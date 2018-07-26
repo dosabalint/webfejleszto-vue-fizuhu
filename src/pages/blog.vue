@@ -9,7 +9,7 @@
                     <div class="row px-lg-5">
                         <div class="card-deck my-5">
                             <div class="row">
-                                <div class="col-12 col-lg-6 my-3" v-for="post in filteredPostCollection">
+                                <div class="col-12 col-lg-6 my-3" v-for="post in postCollection" :key="post.id">
                                     <BlogPostCard :post="post"></BlogPostCard>
                                 </div>
                             </div>
@@ -73,51 +73,56 @@
 
 
 <script>
-import BlogPostCard from '../components/BlogPostCard.vue';
-import BlogPostCategories from '../components/BlogPostCategories.vue';
-import DataService from '../DataService';
+import BlogPostCard from "../components/BlogPostCard.vue";
+import BlogPostCategories from "../components/BlogPostCategories.vue";
+import DataService from "../DataService";
+import { TYPES } from "../store";
 
 export default {
-    components: {
-        BlogPostCard,
-        BlogPostCategories
-    },
+  components: {
+    BlogPostCard,
+    BlogPostCategories
+  },
 
-    data() {
-        return {
-            postCollection: [],
-            filters: {}
-        };
-    },
+  data() {
+    return {
+      filters: {}
+    };
+  },
 
-    created() {
-        DataService.GetPosts().then(posts => {
-            this.postCollection = posts;
-        });
-    },
-
-    computed: {
-        filteredPostCollection() {
-            // ha nincs kagetória szűrés, akkor visszaadunk mindent
-            if (!this.$route.params.categoryName) {
-                return this.postCollection;
-            }
-
-            // ha van kategória szűrés, akkor filterezzük az elemeket
-            return this.postCollection.filter(post => {
-                return post.category == this.$route.params.categoryName;
-            });
-        }
-    },
-
-    methods: {
-        OnCategoryChange(newCategory) {
-            if (!newCategory) {
-                this.$delete(this.filters, 'category');
-            } else {
-                this.$set(this.filters, 'category', newCategory);
-            }
-        }
+  created() {
+    if (this.$store.getters.isLoggedIn) {
+      return this.$store.dispatch(TYPES.actions.loadPosts);
+    } else {
+      this.$router.push({ name: "login" });
     }
+  },
+
+  computed: {
+    postCollection() {
+      return this.$store.state.posts;
+    },
+    filteredPostCollection() {
+      // ha nincs kagetória szűrés, akkor visszaadunk mindent
+      if (!this.$route.params.categoryName) {
+        return this.postCollection;
+      }
+
+      // ha van kategória szűrés, akkor filterezzük az elemeket
+      return this.postCollection.filter(post => {
+        return post.category == this.$route.params.categoryName;
+      });
+    }
+  },
+
+  methods: {
+    OnCategoryChange(newCategory) {
+      if (!newCategory) {
+        this.$delete(this.filters, "category");
+      } else {
+        this.$set(this.filters, "category", newCategory);
+      }
+    }
+  }
 };
 </script>

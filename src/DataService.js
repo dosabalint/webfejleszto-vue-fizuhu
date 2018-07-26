@@ -3,12 +3,6 @@ import Axios from "axios";
 export const FIREBASE_URL = "https://fizuhulive.firebaseio.com";
 
 export default {
-  GetPosts() {
-    return Axios.get(`${FIREBASE_URL}/blogposts.json`).then(result => {
-      return result.data;
-    });
-  },
-
   GetPost(postID) {
     return Axios.get(`${FIREBASE_URL}/blogposts/${postID}.json`).then(
       result => {
