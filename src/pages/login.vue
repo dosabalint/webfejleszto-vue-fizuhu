@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import { TYPES } from "../store.js";
+
 export default {
   name: "login",
   data() {
@@ -61,7 +63,7 @@ export default {
   methods: {
     login() {
       this.$store
-        .dispatch("signInAction", {
+        .dispatch(TYPES.actions.signIn, {
           email: this.email,
           password: this.password
         })

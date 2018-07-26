@@ -55,6 +55,8 @@
 </template>
 
 <script>
+import { TYPES } from "../store";
+
 export default {
   name: "registration",
   data() {
@@ -72,7 +74,7 @@ export default {
       }
 
       this.$store
-        .dispatch("signUpAction", {
+        .dispatch(TYPES.actions.signUp, {
           email: this.email,
           password: this.password
         })

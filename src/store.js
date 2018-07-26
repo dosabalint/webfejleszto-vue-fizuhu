@@ -5,6 +5,17 @@ Vue.use(Vuex);
 
 import DataService from "./DataService";
 
+export const TYPES = {
+  actions: {
+    signIn: "signIn",
+    signUp: "signUp",
+    auth: "auth"
+  },
+  mutations: {
+    setUser: "setUser"
+  }
+};
+
 const state = {
   user: {
     kind: "",
@@ -17,27 +28,27 @@ const state = {
 };
 
 const actions = {
-  signInAction(vuexContext, credentialsPayload) {
-    return vuexContext.dispatch("authAction", {
+  [TYPES.actions.signIn](vuexContext, credentialsPayload) {
+    return vuexContext.dispatch(TYPES.actions.auth, {
       ...credentialsPayload,
       isSignUp: false
     });
   },
-  signUpAction(vuexContext, credentialsPayload) {
-    return vuexContext.dispatch("authAction", {
+  [TYPES.actions.signUp](vuexContext, credentialsPayload) {
+    return vuexContext.dispatch(TYPES.actions.auth, {
       ...credentialsPayload,
       isSignUp: true
     });
   },
-  authAction(vuexContext, authPayload) {
+  [TYPES.actions.auth](vuexContext, authPayload) {
     return DataService.Auth(authPayload).then(r =>
-      vuexContext.commit("setUserMutation", r)
+      vuexContext.commit(TYPES.mutations.setUser, r)
     );
   }
 };
 
 const mutations = {
-  setUserMutation(state, userPayload) {
+  [TYPES.mutations.setUser](state, userPayload) {
     console.log("userMutation: ", userPayload);
     state.user = Object.assign({}, userPayload);
   }
