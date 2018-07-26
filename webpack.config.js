@@ -38,7 +38,17 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["env", "stage-3"]
+            presets: [
+              [
+                "env",
+                {
+                  target: {
+                    browsers: ["last 2 versions", "> 1%"]
+                  }
+                }
+              ],
+              "stage-3"
+            ]
           }
         }
       },
