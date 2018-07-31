@@ -18,10 +18,6 @@
 </template>
 
 <script>
-// data
-import DataService from "../DataService";
-
-// chart
 import DoughnutChart from "../components/DoughnutChart.vue";
 import BarChart from "../components/BarChart.vue";
 import { mapActions } from "vuex";
