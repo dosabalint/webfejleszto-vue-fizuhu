@@ -9,7 +9,9 @@
                     <div class="row px-lg-5">
                         <div class="card-deck my-5">
                             <div class="row">
-                                <div class="col-12 col-lg-6 my-3" v-for="post in postCollection" :key="post.id">
+                                <div class="col-12 col-lg-6 my-3"
+                                     v-for="post in postCollection"
+                                     :key="post.id">
                                     <BlogPostCard :post="post"></BlogPostCard>
                                 </div>
                             </div>
@@ -38,12 +40,17 @@
                     </div>
                 </main>
 
-                <aside id="aside" class="col-12 col-md-3 mt-5">
+                <aside id="aside"
+                       class="col-12 col-md-3 mt-5">
 
                     <!-- Search -->
                     <form class="form-inline">
-                        <input class="form-control mr-sm-2 mb-2" type="search" placeholder="Search" aria-label="Keresés">
-                        <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Keresés</button>
+                        <input class="form-control mr-sm-2 mb-2"
+                               type="search"
+                               placeholder="Search"
+                               aria-label="Keresés">
+                        <button class="btn btn-sm btn-outline-success my-2 my-sm-0"
+                                type="submit">Keresés</button>
                     </form>
 
                     <!-- cagetories -->
@@ -54,14 +61,22 @@
                     <div class="my-5">
                         <h3 class="mb-3">Tags</h3>
 
-                        <a href="#" class="badge badge-primary badge-pill p-2 m-1">Informatika</a>
-                        <a href="#" class="badge badge-secondary badge-pill p-2 m-1">Marketing</a>
-                        <a href="#" class="badge badge-success badge-pill p-2 m-1">Oktatás</a>
-                        <a href="#" class="badge badge-danger badge-pill p-2 m-1">Művészet</a>
-                        <a href="#" class="badge badge-warning badge-pill p-2 m-1">Warning</a>
-                        <a href="#" class="badge badge-info badge-pill p-2 m-1">Info</a>
-                        <a href="#" class="badge badge-light badge-pill p-2 m-1">Light</a>
-                        <a href="#" class="badge badge-dark badge-pill p-2 m-1">Dark</a>
+                        <a href="#"
+                           class="badge badge-primary badge-pill p-2 m-1">Informatika</a>
+                        <a href="#"
+                           class="badge badge-secondary badge-pill p-2 m-1">Marketing</a>
+                        <a href="#"
+                           class="badge badge-success badge-pill p-2 m-1">Oktatás</a>
+                        <a href="#"
+                           class="badge badge-danger badge-pill p-2 m-1">Művészet</a>
+                        <a href="#"
+                           class="badge badge-warning badge-pill p-2 m-1">Warning</a>
+                        <a href="#"
+                           class="badge badge-info badge-pill p-2 m-1">Info</a>
+                        <a href="#"
+                           class="badge badge-light badge-pill p-2 m-1">Light</a>
+                        <a href="#"
+                           class="badge badge-dark badge-pill p-2 m-1">Dark</a>
                     </div>
 
                 </aside>
@@ -75,7 +90,6 @@
 <script>
 import BlogPostCard from "../components/BlogPostCard.vue";
 import BlogPostCategories from "../components/BlogPostCategories.vue";
-import DataService from "../DataService";
 import { TYPES } from "../store";
 
 export default {

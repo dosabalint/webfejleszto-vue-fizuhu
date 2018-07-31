@@ -112,7 +112,6 @@
 </template>
 
 <script>
-import DataService from "../DataService";
 import { mapGetters } from "vuex";
 import { TYPES } from "../store";
 
