@@ -21,7 +21,8 @@ export const TYPES = {
     auth: "auth",
     loadPosts: "loadPosts",
     postContactMessage: "postContactMessage",
-    postSurveyResponse: "postSurveyResponse"
+    postSurveyResponse: "postSurveyResponse",
+    getSurveyData: "getSurveyData"
   },
   mutations: {
     setUser: "setUser",
@@ -45,6 +46,18 @@ const state = {
 };
 
 const actions = {
+  [TYPES.actions.getSurveyData]({ state }) {
+    return Axios.get(
+      `${state.url.firebase}/surveyResponses.json?auth=${state.user.idToken}`
+    )
+      .then(result => {
+        return result.data;
+      })
+      .catch(error => {
+        console.warn("getPost: ", error);
+        return Promise.reject("getsurvey para");
+      });
+  },
   [TYPES.actions.postSurveyResponse]({ state }, surveyPayload) {
     return Axios.post(
       `${state.url.firebase}/surveyResponses.json?auth=${state.user.idToken}`,

@@ -1,20 +1,20 @@
 <template>
-    <div class="container my-5">
+  <div class="container my-5">
 
-        <div class="mb-5">
-            <h2 class="mb-5">Kitöltések száma munkakörönként</h2>
-            <DoughnutChart :height="100"
-                           :chartData="fillJobData"></DoughnutChart>
-        </div>
-
-        <div class="mb-5">
-            <h2 class="mb-5">Átlagfizetések munkakörönként</h2>
-            <BarChart :height="100"
-                      :chartData="jobIncomeData"
-                      :options="barOptions"></BarChart>
-        </div>
-
+    <div class="mb-5">
+      <h2 class="mb-5">Kitöltések száma munkakörönként</h2>
+      <DoughnutChart :height="100"
+                     :chartData="fillJobData"></DoughnutChart>
     </div>
+
+    <div class="mb-5">
+      <h2 class="mb-5">Átlagfizetések munkakörönként</h2>
+      <BarChart :height="100"
+                :chartData="jobIncomeData"
+                :options="barOptions"></BarChart>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -24,6 +24,8 @@ import DataService from "../DataService";
 // chart
 import DoughnutChart from "../components/DoughnutChart.vue";
 import BarChart from "../components/BarChart.vue";
+import { mapActions } from "vuex";
+import { TYPES } from "../store";
 
 export default {
   components: {
@@ -47,6 +49,7 @@ export default {
   },
 
   computed: {
+    ...mapActions({ loadData: TYPES.actions.getSurveyData }),
     fillJobData() {
       // datasets
       let counts = this.jobs.map(job => {
@@ -125,7 +128,7 @@ export default {
   },
 
   created() {
-    DataService.GetSurveyData().then(result => {
+    this.loadData.then(result => {
       this.rawData = Object.values(result);
     });
   }
