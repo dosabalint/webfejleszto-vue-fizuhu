@@ -25,6 +25,10 @@ export const TYPES = {
     setUser: "setUser",
     deleteUser: "deleteUser",
     setPosts: "setPosts"
+  },
+  getters: {
+    isLoggedIn: "isLoggedIn",
+    getPost: "getPost"
   }
 };
 
@@ -98,7 +102,10 @@ const mutations = {
 };
 
 const getters = {
-  isLoggedIn: state => Boolean(state.user.idToken)
+  [TYPES.getters.isLoggedIn]: state => Boolean(state.user.idToken),
+  [TYPES.getters.getPost]: state => postId => {
+    return state.posts.find(p => p.id === postId);
+  }
 };
 
 export default new Vuex.Store({
