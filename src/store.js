@@ -19,7 +19,8 @@ export const TYPES = {
     signIn: "signIn",
     signUp: "signUp",
     auth: "auth",
-    loadPosts: "loadPosts"
+    loadPosts: "loadPosts",
+    postContactMessage: "postContactMessage"
   },
   mutations: {
     setUser: "setUser",
@@ -43,6 +44,15 @@ const state = {
 };
 
 const actions = {
+  [TYPES.actions.postContactMessage]({ state }, contactPayload) {
+    return Axios.post(
+      `${state.url.firebase}/contactMessages.json?auth=${state.user.idToken}`,
+      contactPayload
+    ).catch(error => {
+      console.warn("store postContactMsg:", error);
+      return Promise.reject("contact msg para waaaa");
+    });
+  },
   [TYPES.actions.signIn]({ dispatch }, credentialsPayload) {
     return dispatch(TYPES.actions.auth, {
       ...credentialsPayload,
