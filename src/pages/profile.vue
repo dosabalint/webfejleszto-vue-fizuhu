@@ -1,10 +1,10 @@
 <template>
-    <pre>{{user}}</pre>
+  <pre>{{user}}</pre>
 </template>
 
 <script>
 export default {
-  name: "profil",
+  name: "profile",
   computed: {
     user() {
       return this.$store.state.user || {};

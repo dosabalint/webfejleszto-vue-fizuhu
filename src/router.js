@@ -78,8 +78,8 @@ export default new VueRouter({
       component: registration
     },
     {
-      name: "profil",
-      path: "/profil",
+      name: "profile",
+      path: "/profile",
       component: profile
     }
   ]
