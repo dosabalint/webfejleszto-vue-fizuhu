@@ -10,32 +10,12 @@
                         <div class="card-deck my-5">
                             <div class="row">
                                 <div class="col-12 col-lg-6 my-3"
-                                     v-for="post in postCollection"
+                                     v-for="post in filteredPostCollection"
                                      :key="post.id">
                                     <BlogPostCard :post="post"></BlogPostCard>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- <nav aria-label="Page navigation example" class="col-11 mt-5">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Előző</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Következő</a>
-                                </li>
-                            </ul>
-                        </nav> -->
 
                     </div>
                 </main>
@@ -54,9 +34,8 @@
                     </form>
 
                     <!-- cagetories -->
-                    <!-- <BlogPostCategories 
-                        :postCollection="postCollection" 
-                        @cagetoryChange="OnCategoryChange"></BlogPostCategories> -->
+                    <BlogPostCategories :postCollection="postCollection"
+                                        @cagetoryChange="OnCategoryChange"></BlogPostCategories>
 
                     <div class="my-5">
                         <h3 class="mb-3">Tags</h3>
@@ -91,6 +70,7 @@
 import BlogPostCard from "../components/BlogPostCard.vue";
 import BlogPostCategories from "../components/BlogPostCategories.vue";
 import { TYPES } from "../store";
+import { mapState } from "vuex";
 
 export default {
   components: {
@@ -109,9 +89,7 @@ export default {
   },
 
   computed: {
-    postCollection() {
-      return this.$store.state.posts;
-    },
+    ...mapState({ postCollection: state => state.posts }),
     filteredPostCollection() {
       // ha nincs kagetória szűrés, akkor visszaadunk mindent
       if (!this.$route.params.categoryName) {
